@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(61, 65, 71);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 5rem;
+  min-width: 80%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 5rem;
+  min-width: 80%;
+}
+section {
+  width: 100%;
+}
+main h2 {
+  margin-bottom: 1rem;
+  color: rgb(164, 172, 186);
+  font-size: 3rem;
+  font-weight: 100;
+}
+header h1 {
+  margin-bottom: 1rem;
+  color: rgb(164, 172, 186);
+  font-size: 4rem;
+  font-weight: 100;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+.form {
+  min-width: 100%;
+}
+.task-input {
+  background-color: rgb(88, 92, 100);
+  color: white;
+  height: 2.5rem;
+  width: 75%;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+button {
+  padding: 5px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: rgb(152, 105, 197);
+  background-color: transparent;
+  border: solid 1px rgb(152, 105, 197);
+  border-radius: 10px;
+}
+button:hover {
+  background-color: rgb(152, 105, 197);
+  color: rgb(209, 187, 230);
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.content {
+  background-color: rgb(88, 92, 100);
+  color: white;
+  height: 2.5rem;
+  width: 80%;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.actions {
+  margin-left: 10px;
+  display: flex;
+  gap: 2px;
+}
