@@ -3,14 +3,15 @@ const input = document.querySelector("[data-input]");
 const submit = document.querySelector("[data-submit]");
 const tasks = document.querySelector("[data-tasks]");
 let taskID = 0;
+let outputID = 1000;
 
 const createTask = (task) => {
   const taskTemplate = `<div class="task" id="${taskID}">
     <div class="content">
-    <input data-output type="text" value="${task}" readonly />
+    <input id="${outputID}" data-output type="text" value="${task}" readonly />
     </div>
     <div class="actions">
-    <button data-edit onclick="editTask(${taskID})">Edit</button>
+    <button data-edit onclick="editTask(${outputID})">Edit</button>
     <button data-delete onclick="deleteTask(${taskID})">Delete</button>
     </div>
     </div>`;
@@ -19,20 +20,20 @@ const createTask = (task) => {
 
   tasks.appendChild(newTask);
   taskID++;
+  outputID++;
 };
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   createTask(input.value);
+  input.value = "";
 });
 
-edit.addEventListener("click");
-
-function deleteTask(taskID) {
-  const item = document.getElementById(taskID);
+function deleteTask(taskid) {
+  const item = document.getElementById(taskid);
   item.remove();
 }
-function editTask(taskID) {
-  const output = document.querySelectorAll("[data-output]");
-  console.log(output[taskID].value);
+function editTask(outputID) {
+  const output = document.getElementById(outputID);
+  output.removeAttribute("readonly");
 }
