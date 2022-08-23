@@ -11,7 +11,7 @@ const createTask = (task) => {
     <input id="${outputID}" data-output type="text" value="${task}" readonly />
     </div>
     <div class="actions">
-    <button data-edit onclick="editTask(${outputID})">Edit</button>
+    <button data-edit onclick="doneTask(${outputID})">Done</button>
     <button data-delete onclick="deleteTask(${taskID})">Delete</button>
     </div>
     </div>`;
@@ -33,7 +33,7 @@ function deleteTask(taskid) {
   const item = document.getElementById(taskid);
   item.remove();
 }
-function editTask(outputID) {
+function doneTask(outputID) {
   const output = document.getElementById(outputID);
-  output.removeAttribute("readonly");
+  output.style.backgroundColor = "red";
 }
